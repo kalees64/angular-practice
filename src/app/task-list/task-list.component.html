@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h3>Task List</h3>
+
+      <a routerLink="/tasks/create" class="btn btn-primary mb-1">Create Task</a>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sno</th>
+            <th>Task Name</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @if(tasks){ @for(task of tasks; track task.id; let i = $index){
+          <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ task.name }}</td>
+            <td>{{ task.status }}</td>
+            <td>
+              <a routerLink="/tasks/{{ task.id }}" class="btn btn-secondary"
+                >View</a
+              >
+              &nbsp;
+              <a routerLink="/tasks/{{ task.id }}/edit" class="btn btn-info"
+                >Edit</a
+              >
+              &nbsp; @if(task.status === 'PENDING'){
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="completeTask(task.id, task)"
+              >
+                Mark as Completed
+              </button>
+              &nbsp; }
+
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="deleteTask(task.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          } } @else {
+          <tr>
+            <td>No Data Found</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

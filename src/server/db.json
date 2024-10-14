@@ -1,0 +1,62 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Install Angular CLI",
+      "status": "COMPLETED",
+      "created_by": "111"
+    },
+    {
+      "id": "2",
+      "name": "Create Angular Project/Components",
+      "status": "COMPLETED",
+      "created_by": "111"
+    },
+    {
+      "id": "1229",
+      "name": "Update Form Component",
+      "status": "COMPLETED",
+      "created_by": "111"
+    },
+    {
+      "id": "520a",
+      "name": "Reactive Forms with validation",
+      "status": "COMPLETED",
+      "created_by": "111"
+    },
+    {
+      "id": "6da1",
+      "name": "AdminTask 1",
+      "status": "PENDING",
+      "created_by": "111"
+    },
+    {
+      "id": "efec",
+      "name": "Admin Task 2",
+      "status": "PENDING",
+      "created_by": "111"
+    },
+    {
+      "id": "7c2d",
+      "name": "User Task 1",
+      "status": "PENDING",
+      "created_by": "121"
+    }
+  ],
+  "users": [
+    {
+      "id": "111",
+      "email": "admin@gmail.com",
+      "password": "pass1234",
+      "name": "Vikram Kaleeswaran",
+      "role": "ADMIN"
+    },
+    {
+      "id": "121",
+      "email": "vkalees64@gmail.com",
+      "password": "64646464",
+      "name": "Vikram Kaleeswaran",
+      "role": "USER"
+    }
+  ]
+}

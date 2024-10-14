@@ -1,0 +1,41 @@
+<div class="containet-fluid">
+  <div class="row">
+    <div class="col">
+      <h3>Update Task</h3>
+      <form (ngSubmit)="onSubmit()" [formGroup]="taskForm">
+        <div>
+          <label for="taskName" class="form-label">Task Name</label>
+          <input
+            type="text"
+            name="taskName"
+            id="taskName"
+            placeholder="Enter Task Name"
+            formControlName="name"
+            class="form-control"
+          />
+          <span class="text-danger" *ngIf="name.errors"
+            >Please Enter Task Name</span
+          >
+        </div>
+
+        <div>
+          <label for="status" class="form-label">Status</label>
+          <select
+            name="status"
+            id="status"
+            formControlName="status"
+            class="form-control"
+          >
+            <option disabled>---SELECT---</option>
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+          </select>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
