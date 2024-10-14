@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../user.service';
@@ -10,7 +10,8 @@ import { UserService } from '../user.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  userRole!: string;
   constructor(
     private router: Router,
     private toast: ToastrService,
@@ -27,5 +28,9 @@ export class HeaderComponent {
     } else {
       this.toast.error('You are not logged in');
     }
+  }
+
+  ngOnInit(): void {
+    this.userRole = this.userService.getUserRoleFromLocalStorage();
   }
 }

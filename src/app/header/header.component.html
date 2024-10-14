@@ -20,13 +20,15 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/tasks">Tasks</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/tasks/all-tasks">All Tasks</a>
         </li>
       </ul>
+
+      <button type="button" class="btn btn-outline-light" (click)="logOut()">
+        Logout
+      </button>
     </div>
-    <button type="button" class="btn btn-light" (click)="logOut()">
-      Logout
-    </button>
   </div>
 </nav>

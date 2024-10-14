@@ -26,12 +26,6 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
     console.log('TaskListComponent  ngOnInit');
 
-    const userRole = this.userService.getUserRoleFromLocalStorage();
-
-    if (userRole === 'ADMIN') {
-      this.router.navigateByUrl('/tasks/all-tasks');
-    }
-
     this.taskService.getTasks().subscribe(
       (res: any) => {
         const user = this.userService.getUserFromLocalStorage();

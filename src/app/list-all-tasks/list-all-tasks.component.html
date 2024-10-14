@@ -18,7 +18,7 @@
           @if(tasks){ @for(task of tasks; track task.id; let i = $index){
           <tr>
             <td>{{ i + 1 }}</td>
-            <td>{{ task.name }}</td>
+            <td>{{ task.name }} &nbsp;</td>
             <td>{{ task.status }}</td>
             <td>
               <a routerLink="/tasks/{{ task.id }}" class="btn btn-secondary"
